@@ -1,1 +1,1 @@
-# cursos-api
+# courses-api
