@@ -11,5 +11,10 @@ Rails.application.routes.draw do
       collection do
       end
     end
+
+    resources :courses do
+      collection do
+      end
+    end
   end
 end
