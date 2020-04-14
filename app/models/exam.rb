@@ -7,4 +7,8 @@ class Exam < ApplicationRecord
   def finished?
     score.present?
   end
+  
+  def update_score(score)
+    self.update_attribute(:score, score) if score.between?(1, 100)
+  end
 end

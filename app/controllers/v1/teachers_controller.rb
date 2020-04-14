@@ -25,6 +25,13 @@ module V1
       end
     end
 
+    def correct_exam
+      teacher.correct_exam(params[:exam_id], params[:score])
+      render json: {}, status: :ok
+    rescue StandardError => e
+      render json: e, status: :bad_request
+    end
+
     def update
       return render json: teacher if teacher.update(teacher_params)
 

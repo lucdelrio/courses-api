@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :v1, path: 'api/v1', defaults: { format: 'json' } do
     resources :teachers do
       collection do
+        post :correct_exam
       end
     end
 
