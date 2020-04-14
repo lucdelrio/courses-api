@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe TeachersController, type: :controller do
+RSpec.describe V1::TeachersController, type: :controller do
   let(:teacher) { create(:teacher) }
 
   describe 'DELETE #destroy' do
