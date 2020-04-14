@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TeachersController < ApplicationController
   # before_action :set_teacher, only: [:show, :update, :destroy]
 
@@ -38,12 +40,13 @@ class TeachersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def teacher
-      @teacher ||= Teacher.find(params[:id])
-    end
 
-    def teacher_params
-      params.require(:teacher).permit(:name, :surname, :birthdate, :address, :email, :phone_number)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def teacher
+    @teacher ||= Teacher.find(params[:id])
+  end
+
+  def teacher_params
+    params.require(:teacher).permit(:name, :surname, :birthdate, :address, :email, :phone_number)
+  end
 end
