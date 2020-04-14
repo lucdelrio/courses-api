@@ -17,21 +17,21 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: decemberlabs
-  password: finance-api
+  username: postgres
+  password: course-api
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: decemberlabs-finance-api_development
+  database: course-api_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: decemberlabs-finance-api
+  #username: course-api
 
   # The password associated with the postgres role (username).
   #password:
@@ -60,7 +60,7 @@ development:
 test:
   <<: *default
   database: course-api_test
-  username: course
+  username: postgres
   password: course-api
 
 
@@ -86,5 +86,5 @@ test:
 production:
   <<: *default
   database: course-api_production
-  username: course-api
+  username: postgres
   password: <%= ENV['COURSE-API_DATABASE_PASSWORD'] %>

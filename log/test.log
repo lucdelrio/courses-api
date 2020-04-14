@@ -1,0 +1,650 @@
+Started GET "/teachers" for 127.0.0.1 at 2020-04-14 12:58:37 -0300
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 81ms (ActiveRecord: 0.0ms)
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (3.6ms)[0m  [1m[32mINSERT INTO "teachers" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 16:36:53.497461"], ["updated_at", "2020-04-14 16:36:53.497461"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Update (0.4ms)[0m  [1m[33mUPDATE "teachers" SET "email" = $1, "updated_at" = $2 WHERE "teachers"."id" = $3[0m  [["email", "dummy value"], ["updated_at", "2020-04-14 16:36:53.503975"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (2.1ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lucas"], ["surname", "del Rio"], ["email", "lucas@gmail.com"], ["phone_number", 32424234], ["created_at", "2020-04-14 16:58:04.799236"], ["updated_at", "2020-04-14 16:58:04.799236"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 103ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 110ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 115ms (ActiveRecord: 0.0ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 13ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 112ms (ActiveRecord: 0.0ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "gmail.com"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.5ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lucas"], ["surname", "del Rio"], ["email", "gmail.com"], ["phone_number", 32424234], ["created_at", "2020-04-14 17:06:36.285217"], ["updated_at", "2020-04-14 17:06:36.285217"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 4ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 1557ms (Views: 0.3ms | ActiveRecord: 7.3ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "thurman@lindbeer.info"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jerold"], ["surname", "McLaughlin"], ["email", "thurman@lindbeer.info"], ["phone_number", 0], ["created_at", "2020-04-14 17:10:22.449634"], ["updated_at", "2020-04-14 17:10:22.449634"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "alva@crooksgreen.name"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.2ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Milan"], ["surname", "Keeling"], ["email", "alva@crooksgreen.name"], ["phone_number", 1], ["created_at", "2020-04-14 17:10:22.456288"], ["updated_at", "2020-04-14 17:10:22.456288"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 110ms (ActiveRecord: 0.0ms)
+  [1m[36mTeacher Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (26.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "rob@herman.net"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (1.7ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Irina"], ["surname", "Romaguera"], ["email", "rob@herman.net"], ["phone_number", 292], ["created_at", "2020-04-14 18:24:42.875392"], ["updated_at", "2020-04-14 18:24:42.875392"]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"6"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 113ms (ActiveRecord: 0.0ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "jeffrey@bosco.net"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.8ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "In"], ["surname", "DuBuque"], ["email", "jeffrey@bosco.net"], ["phone_number", 1], ["created_at", "2020-04-14 18:25:42.447910"], ["updated_at", "2020-04-14 18:25:42.447910"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 111ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "pearline@welchkulas.com"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.2ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Etha"], ["surname", "Little"], ["email", "pearline@welchkulas.com"], ["phone_number", 297], ["created_at", "2020-04-14 18:25:42.573967"], ["updated_at", "2020-04-14 18:25:42.573967"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"8"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 398ms (Views: 0.2ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "shela@monahangorczany.info"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.5ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alan"], ["surname", "Collier"], ["email", "shela@monahangorczany.info"], ["phone_number", 754], ["created_at", "2020-04-14 18:27:24.780353"], ["updated_at", "2020-04-14 18:27:24.780353"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"9"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "jesicakuhic@stehrmiller.info"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Leisha"], ["surname", "Harber"], ["email", "jesicakuhic@stehrmiller.info"], ["phone_number", 1], ["created_at", "2020-04-14 18:28:09.891868"], ["updated_at", "2020-04-14 18:28:09.891868"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 122ms (ActiveRecord: 0.0ms)
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 116ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "vickiward@carterhudson.net"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nolan"], ["surname", "Bergnaum"], ["email", "vickiward@carterhudson.net"], ["phone_number", 213], ["created_at", "2020-04-14 18:28:16.197397"], ["updated_at", "2020-04-14 18:28:16.197397"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 112ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "tabatha@lemkekuvalis.net"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.2ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cleo"], ["surname", "Rolfson"], ["email", "tabatha@lemkekuvalis.net"], ["phone_number", 905], ["created_at", "2020-04-14 18:28:16.335844"], ["updated_at", "2020-04-14 18:28:16.335844"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+  [1m[36mTeacher Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"mail"=>"gmail.com", "name"=>"Lucas", "number"=>"32424234", "surname"=>"del Rio"}}
+Unpermitted parameters: :mail, :number
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "nenagulgowski@schinner.co"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lamar"], ["surname", "Ortiz"], ["email", "nenagulgowski@schinner.co"], ["phone_number", 357], ["created_at", "2020-04-14 18:28:57.168823"], ["updated_at", "2020-04-14 18:28:57.168823"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "rocky@abernathywilkinson.co"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alexia"], ["surname", "Schmeler"], ["email", "rocky@abernathywilkinson.co"], ["phone_number", 1], ["created_at", "2020-04-14 18:28:57.174414"], ["updated_at", "2020-04-14 18:28:57.174414"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.3ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+No template found for TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 112ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 115ms (ActiveRecord: 0.0ms)
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 111ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "mariano@cormier.biz"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Hanna"], ["surname", "Muller"], ["email", "mariano@cormier.biz"], ["phone_number", 170], ["created_at", "2020-04-14 18:29:32.663817"], ["updated_at", "2020-04-14 18:29:32.663817"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"mail"=>"gmail.com", "name"=>"Lucas", "number"=>"32424234", "surname"=>"del Rio"}}
+Unpermitted parameters: :mail, :number
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "stacey@raynor.name"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (1.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Anneliese"], ["surname", "Jerde"], ["email", "stacey@raynor.name"], ["phone_number", 1], ["created_at", "2020-04-14 18:29:32.705842"], ["updated_at", "2020-04-14 18:29:32.705842"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.3ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 111ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"mail"=>"gmail.com", "name"=>"Lucas", "number"=>"32424234", "surname"=>"del Rio"}}
+Unpermitted parameters: :mail, :number
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 182ms (Views: 0.4ms | ActiveRecord: 7.5ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.5ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+Processing by TeachersController#create as HTML
+  Parameters: {"teacher"=>{"email"=>"lucas@gmail.com", "name"=>"Lucas", "phone_number"=>"32424234", "surname"=>"del Rio"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "lucas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "adolfo@wyman.net"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.7ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Danial"], ["surname", "Beahan"], ["email", "adolfo@wyman.net"], ["phone_number", 166], ["created_at", "2020-04-14 18:31:54.680282"], ["updated_at", "2020-04-14 18:31:54.680282"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.3ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 116ms (ActiveRecord: 2.2ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "mitchbartoletti@conroy.biz"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.2ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rueben"], ["surname", "Daniel"], ["email", "mitchbartoletti@conroy.biz"], ["phone_number", 1], ["created_at", "2020-04-14 18:31:54.806074"], ["updated_at", "2020-04-14 18:31:54.806074"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 128ms (ActiveRecord: 0.0ms)
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 117ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "selene@boyle.io"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.5ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ahmed"], ["surname", "Wilderman"], ["email", "selene@boyle.io"], ["phone_number", 0], ["created_at", "2020-04-14 18:32:01.340716"], ["updated_at", "2020-04-14 18:32:01.340716"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "guy@mrazmarquardt.name"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.2ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alysha"], ["surname", "Kuvalis"], ["email", "guy@mrazmarquardt.name"], ["phone_number", 380], ["created_at", "2020-04-14 18:32:01.352484"], ["updated_at", "2020-04-14 18:32:01.352484"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 120ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "kieshaerdman@dooleykeeling.name"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (1.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lazaro"], ["surname", "Stanton"], ["email", "kieshaerdman@dooleykeeling.name"], ["phone_number", 0], ["created_at", "2020-04-14 18:32:29.523973"], ["updated_at", "2020-04-14 18:32:29.523973"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#destroy as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 108ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "tatumhomenick@morar.org"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.2ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Shanon"], ["surname", "Kuhlman"], ["email", "tatumhomenick@morar.org"], ["phone_number", 0], ["created_at", "2020-04-14 18:32:29.647386"], ["updated_at", "2020-04-14 18:32:29.647386"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+Processing by TeachersController#index as HTML
+Completed 406 Not Acceptable in 111ms (ActiveRecord: 0.0ms)
