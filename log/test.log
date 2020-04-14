@@ -2124,3 +2124,652 @@ Processing by V1::CoursesController#destroy as HTML
 No template found for V1::CoursesController#destroy, rendering head :no_content
 Completed 204 No Content in 69ms (ActiveRecord: 2.5ms)
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "maurowilliamson@kshlerinstark.biz"], ["LIMIT", 1]]
+  [1m[36mStudent Create (1.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Reed"], ["surname", "Hudson"], ["email", "maurowilliamson@kshlerinstark.biz"], ["phone_number", 0], ["created_at", "2020-04-14 20:45:59.053405"], ["updated_at", "2020-04-14 20:45:59.053405"]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 119ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "AWK"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "AWK"], ["workload", 64095], ["price", 5923.0], ["created_at", "2020-04-14 20:45:59.206317"], ["updated_at", "2020-04-14 20:45:59.206317"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."course_id" = $1[0m  [["course_id", 5]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."course_id" = $1[0m  [["course_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 17.7ms)
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "serinalang@abshire.net"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (2.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tilda"], ["surname", "Krajcik"], ["email", "serinalang@abshire.net"], ["phone_number", 1], ["created_at", "2020-04-14 20:45:59.370192"], ["updated_at", "2020-04-14 20:45:59.370192"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "CL (IBM)"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "CL (IBM)"], ["workload", 55155], ["price", 2629.0], ["created_at", "2020-04-14 20:46:47.803367"], ["updated_at", "2020-04-14 20:46:47.803367"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."course_id" = $1[0m  [["course_id", 6]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."course_id" = $1[0m  [["course_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 5.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "sherryl@stanton.com"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Brianne"], ["surname", "Wyman"], ["email", "sherryl@stanton.com"], ["phone_number", 0], ["created_at", "2020-04-14 20:46:47.859232"], ["updated_at", "2020-04-14 20:46:47.859232"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 111ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "kristynbruen@okon.co"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fernanda"], ["surname", "Herman"], ["email", "kristynbruen@okon.co"], ["phone_number", 234], ["created_at", "2020-04-14 20:46:48.082852"], ["updated_at", "2020-04-14 20:46:48.082852"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (1.8ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 3.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "romankihn@schiller.org"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.5ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "An"], ["surname", "Crona"], ["email", "romankihn@schiller.org"], ["phone_number", 516], ["created_at", "2020-04-14 20:47:56.275198"], ["updated_at", "2020-04-14 20:47:56.275198"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.3ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 103ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "cecil@nolan.info"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Christen"], ["surname", "Dibbert"], ["email", "cecil@nolan.info"], ["phone_number", 1], ["created_at", "2020-04-14 20:47:56.486485"], ["updated_at", "2020-04-14 20:47:56.486485"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "Starlogo"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Starlogo"], ["workload", 66868], ["price", 4449.0], ["created_at", "2020-04-14 20:47:56.578821"], ["updated_at", "2020-04-14 20:47:56.578821"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."course_id" = $1[0m  [["course_id", 7]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."course_id" = $1[0m  [["course_id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 3.6ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "vita@handhodkiewicz.org"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Adell"], ["surname", "White"], ["email", "vita@handhodkiewicz.org"], ["phone_number", 563], ["created_at", "2020-04-14 20:50:26.302463"], ["updated_at", "2020-04-14 20:50:26.302463"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 111ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "G-code"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.8ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "G-code"], ["workload", 38628], ["price", 4222.0], ["created_at", "2020-04-14 20:50:26.530624"], ["updated_at", "2020-04-14 20:50:26.530624"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "fredrick@schuppe.name"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Georgette"], ["surname", "Kris"], ["email", "fredrick@schuppe.name"], ["phone_number", 804], ["created_at", "2020-04-14 20:50:26.557306"], ["updated_at", "2020-04-14 20:50:26.557306"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.3ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 2.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "judy@conroysmith.com"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gino"], ["surname", "Fisher"], ["email", "judy@conroysmith.com"], ["phone_number", 0], ["created_at", "2020-04-14 20:51:51.608460"], ["updated_at", "2020-04-14 20:51:51.608460"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 112ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "Seed7"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Seed7"], ["workload", 14298], ["price", 2306.0], ["created_at", "2020-04-14 20:51:51.808326"], ["updated_at", "2020-04-14 20:51:51.808326"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 8.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "maisie@yundt.co"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Darrin"], ["surname", "Hyatt"], ["email", "maisie@yundt.co"], ["phone_number", 715], ["created_at", "2020-04-14 20:51:51.844119"], ["updated_at", "2020-04-14 20:51:51.844119"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "klarapacocha@heelcarroll.biz"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.4ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Errol"], ["surname", "Wiegand"], ["email", "klarapacocha@heelcarroll.biz"], ["phone_number", 362], ["created_at", "2020-04-14 20:51:59.495188"], ["updated_at", "2020-04-14 20:51:59.495188"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.3ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 114ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "salvadorrempel@hermistondamore.net"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Myrle"], ["surname", "Wiegand"], ["email", "salvadorrempel@hermistondamore.net"], ["phone_number", 0], ["created_at", "2020-04-14 20:51:59.635090"], ["updated_at", "2020-04-14 20:51:59.635090"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.4ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 61ms (ActiveRecord: 2.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "SAS"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "SAS"], ["workload", 15036], ["price", 2524.0], ["created_at", "2020-04-14 20:51:59.714815"], ["updated_at", "2020-04-14 20:51:59.714815"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.6ms)
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "nigel@yost.biz"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.8ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Merlin"], ["surname", "Gerhold"], ["email", "nigel@yost.biz"], ["phone_number", 0], ["created_at", "2020-04-14 20:53:11.644280"], ["updated_at", "2020-04-14 20:53:11.644280"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 119ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 20:53:11.786294"], ["updated_at", "2020-04-14 20:53:11.786294"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Update (0.3ms)[0m  [1m[33mUPDATE "teachers" SET "email" = $1, "updated_at" = $2 WHERE "teachers"."id" = $3[0m  [["email", "dummy value"], ["updated_at", "2020-04-14 20:53:11.789421"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeacher Exists (5.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "tomastorp@hillskihn.biz"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tamie"], ["surname", "Tremblay"], ["email", "tomastorp@hillskihn.biz"], ["phone_number", 691], ["created_at", "2020-04-14 20:53:11.833122"], ["updated_at", "2020-04-14 20:53:11.833122"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 20:53:11.908262"], ["updated_at", "2020-04-14 20:53:11.908262"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Update (0.3ms)[0m  [1m[33mUPDATE "courses" SET "name" = $1, "updated_at" = $2 WHERE "courses"."id" = $3[0m  [["name", "dummy value"], ["updated_at", "2020-04-14 20:53:11.910575"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.9ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 20:53:11.944312"], ["updated_at", "2020-04-14 20:53:11.944312"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Update (0.3ms)[0m  [1m[33mUPDATE "students" SET "email" = $1, "updated_at" = $2 WHERE "students"."id" = $3[0m  [["email", "dummy value"], ["updated_at", "2020-04-14 20:53:11.947977"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "Z notation"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Z notation"], ["workload", 64819], ["price", 7315.0], ["created_at", "2020-04-14 20:53:11.963857"], ["updated_at", "2020-04-14 20:53:11.963857"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.9ms)
+  [1m[36mStudent Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 21:14:46.444893"], ["updated_at", "2020-04-14 21:14:46.444893"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Update (0.3ms)[0m  [1m[33mUPDATE "students" SET "email" = $1, "updated_at" = $2 WHERE "students"."id" = $3[0m  [["email", "dummy value"], ["updated_at", "2020-04-14 21:14:46.447252"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 21:14:46.512302"], ["updated_at", "2020-04-14 21:14:46.512302"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Update (0.3ms)[0m  [1m[33mUPDATE "courses" SET "name" = $1, "updated_at" = $2 WHERE "courses"."id" = $3[0m  [["name", "dummy value"], ["updated_at", "2020-04-14 21:14:46.515369"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "ROOP"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ROOP"], ["workload", 69529], ["price", 9087.0], ["created_at", "2020-04-14 21:14:46.536390"], ["updated_at", "2020-04-14 21:14:46.536390"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 2.1ms)
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.9ms)[0m  [1m[32mINSERT INTO "teachers" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 21:14:46.616233"], ["updated_at", "2020-04-14 21:14:46.616233"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Update (0.3ms)[0m  [1m[33mUPDATE "teachers" SET "email" = $1, "updated_at" = $2 WHERE "teachers"."id" = $3[0m  [["email", "dummy value"], ["updated_at", "2020-04-14 21:14:46.619152"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "clarencecruickshank@koch.co"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kourtney"], ["surname", "Weimann"], ["email", "clarencecruickshank@koch.co"], ["phone_number", 570], ["created_at", "2020-04-14 21:14:46.634380"], ["updated_at", "2020-04-14 21:14:46.634380"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 105ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "coretta@hoppe.io"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.2ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tiny"], ["surname", "Beatty"], ["email", "coretta@hoppe.io"], ["phone_number", 1], ["created_at", "2020-04-14 21:14:46.748025"], ["updated_at", "2020-04-14 21:14:46.748025"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (2.4ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 84ms (ActiveRecord: 7.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "Emacs Lisp"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Emacs Lisp"], ["workload", 50540], ["price", 8416.0], ["created_at", "2020-04-14 21:16:48.807170"], ["updated_at", "2020-04-14 21:16:48.807170"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.7ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "minna@satterfield.co"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Margo"], ["surname", "Dare"], ["email", "minna@satterfield.co"], ["phone_number", 0], ["created_at", "2020-04-14 21:16:48.881291"], ["updated_at", "2020-04-14 21:16:48.881291"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 129ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dominica@heidenreich.io"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.5ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jonathon"], ["surname", "Kreiger"], ["email", "dominica@heidenreich.io"], ["phone_number", 1], ["created_at", "2020-04-14 21:16:49.050413"], ["updated_at", "2020-04-14 21:16:49.050413"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "alden@klein.net"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Keren"], ["surname", "Grimes"], ["email", "alden@klein.net"], ["phone_number", 915], ["created_at", "2020-04-14 21:23:38.470206"], ["updated_at", "2020-04-14 21:23:38.470206"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::StudentsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::StudentsController#destroy, rendering head :no_content
+Completed 204 No Content in 101ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Create (0.9ms)[0m  [1m[32mINSERT INTO "teachers" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 21:23:38.621432"], ["updated_at", "2020-04-14 21:23:38.621432"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Update (0.3ms)[0m  [1m[33mUPDATE "teachers" SET "email" = $1, "updated_at" = $2 WHERE "teachers"."id" = $3[0m  [["email", "dummy value"], ["updated_at", "2020-04-14 21:23:38.627118"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeacher Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mTeacher Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."email" = $1 LIMIT $2[0m  [["email", "ricardofisher@simonis.co"], ["LIMIT", 1]]
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "surname", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gertrudis"], ["surname", "Cremin"], ["email", "ricardofisher@simonis.co"], ["phone_number", 1], ["created_at", "2020-04-14 21:23:38.643822"], ["updated_at", "2020-04-14 21:23:38.643822"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::TeachersController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeacher Destroy (0.8ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+No template found for V1::TeachersController#destroy, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 4.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  [1m[36mCourse Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" ORDER BY "courses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 21:23:38.741400"], ["updated_at", "2020-04-14 21:23:38.741400"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Update (0.3ms)[0m  [1m[33mUPDATE "courses" SET "name" = $1, "updated_at" = $2 WHERE "courses"."id" = $3[0m  [["name", "dummy value"], ["updated_at", "2020-04-14 21:23:38.745748"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCourse Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "dummy value"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-04-14 21:23:38.778761"], ["updated_at", "2020-04-14 21:23:38.778761"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Update (0.3ms)[0m  [1m[33mUPDATE "students" SET "email" = $1, "updated_at" = $2 WHERE "students"."id" = $3[0m  [["email", "dummy value"], ["updated_at", "2020-04-14 21:23:38.780753"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "dummy value"], ["LIMIT", 1]]
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "DUMMY VALUE"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "courses" WHERE "courses"."name" = $1 LIMIT $2[0m  [["name", "C Shell (csh)"], ["LIMIT", 1]]
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "workload", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "C Shell (csh)"], ["workload", 59050], ["price", 5330.0], ["created_at", "2020-04-14 21:23:38.795414"], ["updated_at", "2020-04-14 21:23:38.795414"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Processing by V1::CoursesController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.5ms)
