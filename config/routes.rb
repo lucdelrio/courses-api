@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
     resources :courses do
       collection do
+        get :status
       end
     end
   end

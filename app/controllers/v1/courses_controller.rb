@@ -31,6 +31,10 @@ module V1
       render json: course.errors, status: :unprocessable_entity
     end
 
+    def status
+      render json: course.status
+    end
+
     # DELETE /courses/1
     # DELETE /courses/1.json
     def destroy

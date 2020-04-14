@@ -12,6 +12,11 @@ class Course < ApplicationRecord
     find_finished_exams_by_student(student_id) == find_exams_by_student(student_id)
   end
 
+  def status
+    return 'in_progress' if exams.empty? || exams.where.not(score: nil) == exams.count
+    'finished'
+  end
+
   private
 
   def find_finished_exams_by_student(student_id)
