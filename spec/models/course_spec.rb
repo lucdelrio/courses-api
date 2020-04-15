@@ -8,7 +8,7 @@ RSpec.describe Course, type: :model do
   it { is_expected.to validate_presence_of(:price) }
 
   it { is_expected.to validate_uniqueness_of(:name) }
-  
+
   describe '#status' do
     let(:student) { create(:student) }
     let(:course) { create(:course) }
