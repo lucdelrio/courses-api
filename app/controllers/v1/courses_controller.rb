@@ -35,6 +35,10 @@ module V1
       render json: course.status
     end
 
+    def student_status
+      course.student_has_finished?(params[:student_id])
+    end
+
     # DELETE /courses/1
     # DELETE /courses/1.json
     def destroy

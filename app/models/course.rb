@@ -9,7 +9,8 @@ class Course < ApplicationRecord
   validates :name, uniqueness: true
 
   def student_has_finished?(student_id)
-    find_finished_exams_by_student(student_id) == find_exams_by_student(student_id)
+    return 'in_progress' find_finished_exams_by_student(student_id) != find_exams_by_student(student_id)
+    return 'finished'
   end
 
   def status
